@@ -11,7 +11,7 @@ checkin = input("Enter your check-in date (YYYY-MM-DD): ")
 # "2024-03-07",
 checkout=  input("Enter your check out date (YYYY-MM-DD): ")
 params = {
-  "api_key": "c1fed33f43014632d06b27c4a7808bede13b4be6bb258dc774f3ea5d30b6ccf9",
+  "api_key": "{key}",
   "engine": "google_hotels",
   "q": loc,
   "hl": "en",
