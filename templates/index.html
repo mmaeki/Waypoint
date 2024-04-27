@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+{% endblock %}
+
+{% block body %}
+<div class=container>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        <p>You are missing values</p>
+    </div>
+    {% endif %}
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <form method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="loc" id="txt" placeholder="Enter Location">
+                    <input type="text" class="form-control" name="checkin" id="txt" placeholder="Enter Checkin date">
+                    <input type="text" class="form-control" name="checkout" id="txt" placeholder="Enter Checkout date">
+                </div>
+                <button name="button1" type="submit" class="btn col-12 cold-md-6 " value="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{%if loc | length > 0%}
+<div id="gemini-card" class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">Best Activities</h5>
+        {% for z in Gemini %}
+        <p class="card-text">{{ z }}</p><br>
+        {% endfor %}
+    </div>
+</div>
+{%endif%}
+
+{%if loc | length > 0%}
+<div id="test" class="container">
+    <div class="card-header">
+        <h4>Top Rated Hotels</h4>
+        <ul class="list-group no-borders">
+        
+            {% for x in loc %}
+            <a href=" class="list-group-item list-group-item-action">{{x}}</a>
+            {% endfor %}
+        </ul>
+    </div>
+{%endif%}
+
+
+{% endblock %}

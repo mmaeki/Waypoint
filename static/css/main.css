@@ -1,0 +1,88 @@
+.navbar {
+    background-image: linear-gradient(to bottom, #030303, #2e0958);
+    font-family: Georgia, serif;
+    color: aliceblue;
+}
+
+h4 {
+    font-family: Georgia, serif;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    border: 2px solid #6209c9;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+#gemini-card {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 73%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
+
+}
+
+#gemini-card .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#gemini-card .card-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.no-borders {
+    width: 50%;
+    /* Adjust this value to change the width of the list */
+    max-width: 500px;
+    /* Adjust this value to set the maximum width of the list */
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.no-borders .list-group-item {
+    text-align: center;
+} 
+
+
+p {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: rgb(3, 25, 45);
+    text-align: center;
+}
+
+button {
+    background-color: aqua;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 9px #999;
+    transition: all 0.3s;
+    font-family: 'open sans', sans-serif;
+}
+
+button:hover {
+    background-position: right;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
