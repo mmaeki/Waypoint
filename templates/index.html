@@ -12,32 +12,51 @@
 {% endblock %}
 
 {% block body %}
+<script>
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+        var blurAmount = scrollPosition / 100; // Adjust the denominator to control the blur amount
+        document.getElementById('body').style.filter = 'blur(' + blurAmount + 'px)';
+    });
+</script>
 <div class=container>
     {% if error %}
     <div class="alert alert-danger" role="alert">
         <p>You are missing values</p>
     </div>
     {% endif %}
+    <div>
+        <div class="card-body">
+            <h6 style="color:aliceblue;font-size:50px;font-family:Georgia, 'Times New Roman', Times, serif;"
+                class="card-title text-center">Waypoint AI</h6>
+        </div>
+    </div>
 </div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
             <form method="POST">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="loc" id="txt" placeholder="Enter Location">
-                    <input type="text" class="form-control" name="checkin" id="txt" placeholder="Enter Checkin date">
-                    <input type="text" class="form-control" name="checkout" id="txt" placeholder="Enter Checkout date">
+                <div class="form-group" id="info">
+                    <input type="text" class="form-control" id="loc" name="loc" id="txt" placeholder="Enter Location">
+                    <input type="text" class="form-control" id="checkin" name="checkin" id="txt"
+                        placeholder="Enter Checkin date">
+                    <input type="text" class="form-control" name="checkout" id="checkout"
+                        placeholder="Enter Checkout date">
                 </div>
-                <button name="button1" type="submit" class="btn col-12 cold-md-6 " value="submit">Submit</button>
+                <button id="button1" name="button1" type="submit" class="btn col-12 cold-md-6 text-light"
+                    value="submit">Submit</button>
             </form>
         </div>
     </div>
 </div>
 
 {%if loc | length > 0%}
+<div class="card-header">
+    <h5 style="font-size:large;color:rgb(216, 207, 220); font-family: 'Roboto', sans-serif;">Best Activities</h5>
+</div>
 <div id="gemini-card" class="card mt-3">
     <div class="card-body">
-        <h5 class="card-title">Best Activities</h5>
         {% for z in Gemini %}
         <p class="card-text">{{ z }}</p><br>
         {% endfor %}
@@ -48,15 +67,15 @@
 {%if loc | length > 0%}
 <div id="test" class="container">
     <div class="card-header">
-        <h4>Top Rated Hotels</h4>
+        <h4 style="color:rgb(216, 207, 220); font-family: 'Roboto', sans-serif;">Top Rated Hotels</h4>
         <ul class="list-group no-borders">
-        
+
             {% for x in loc %}
-            <a href=" class="list-group-item list-group-item-action">{{x}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{x}}</a>
             {% endfor %}
         </ul>
     </div>
-{%endif%}
+    {%endif%}
 
 
-{% endblock %}
+    {% endblock %}

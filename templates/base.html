@@ -24,12 +24,14 @@
 
 <body>
     <nav class="navbar navbar-expand-lg sticky-top py-3 px-3 ">
-        <a class="navbar-brand text-light " href="/">WaypointAI</a>
+        <a class="navbar-brand" href="/" style="padding:0px;">
+            <img src="static/css/newlogo.png" alt="logo" width="100" height="75" class="logo" >
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link text-light" href="/">Home <span class="sr-only">(current)</span></a>
@@ -37,13 +39,16 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="/about">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Randomizer</a>
-                </li>
             </ul>
         </div>
     </nav>
+
+
+
+
+
     {% block body %}{% endblock %}
+
 </body>
 
 </html>

@@ -98,7 +98,7 @@ def index():
         print(activities)
 
         if response != "this is not a real location":
-            return render_template('index.html', loc = hotel_names[0:15], Gemini = activities)
+            return render_template('index.html', loc = hotel_names[0:13], Gemini = activities)
     return render_template('index.html', loc = "")
 
 @app.route('/about', methods = ['GET', 'POST'])

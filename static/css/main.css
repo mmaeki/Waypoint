@@ -1,19 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .navbar {
     background-image: linear-gradient(to bottom, #030303, #2e0958);
     font-family: Georgia, serif;
     color: aliceblue;
+
+
 }
 
 h4 {
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
     position: absolute;
-    left: 15%;
-    top: 25%;
-    border: 2px solid #6209c9;
+    left: 7%;
+    top: 42%;
     padding: 10px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    background-image: linear-gradient(to right, #8c5d9b, #2e0958);
+    color: antiquewhite;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    right: 6%;
+    top: 42%;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    background-image: linear-gradient(to right, #8c5d9b, #2e0958);
+    color: antiquewhite;
 }
 
 #gemini-card {
@@ -22,11 +40,12 @@ h4 {
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
-    left: 73%;
-    top: 50%;
+    left: 75%;
+    top: 47.5%;
     width: 500px;
-    height: 500px;
+    height: 525px;
     overflow-y: auto;
+    background-color: #e7e2ec;
 
 }
 
@@ -48,14 +67,14 @@ h4 {
     max-width: 500px;
     /* Adjust this value to set the maximum width of the list */
     position: absolute;
-    left: 10%;
-    top: 60%;
+    left: 2%;
+    top: 73.5%;
     transform: translateY(-50%);
 }
 
 .no-borders .list-group-item {
     text-align: center;
-} 
+}
 
 
 p {
@@ -65,24 +84,98 @@ p {
     text-align: center;
 }
 
-button {
-    background-color: aqua;
+#button1 {
     border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px;
-    box-shadow: 0 9px #999;
-    transition: all 0.3s;
-    font-family: 'open sans', sans-serif;
+    padding: 3;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to left, #635070, #300261);
 }
 
 button:hover {
     background-position: right;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px rgb(155, 124, 208);
     transform: translateY(2px);
 }
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) url('imagebg.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: aliceblue;
+}
+
+.container {
+    background-color: rgba(40, 13, 65, 0.3);
+    /* Semi-transparent white */
+    border: none;
+    /* Remove the border */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Add a shadow for depth */
+    font-family: 'Roboto', sans-serif;
+    /* Modern, clean font */
+    color: #333;
+    /* Dark gray text */
+}
+
+#test .list-group-item {
+    color: #451157;
+    background-color: #e7e2ec;
+}
+
+#test .list-group-item:hover {
+    background-color: #581097a4;
+    color: #fff;
+}
+
+
+#loc::placeholder,
+#checkin::placeholder,
+#checkout::placeholder {
+    color: #dbd5db79;
+    font-size: 16px;
+}
+
+#loc,
+#checkin,
+#checkout {
+    background-color: rgb(25, 1, 39);
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+#navbarNav {
+    position: absolute;
+    left: 90px;
+}
+
+
+#aaa,#bbb{
+    color: #e8d2f0;
+    font-family: "Roboto", sans-serif;
+}
+
+#wrk{
+    font-size: larger;
+    border: #300261;
+    color: white
+}
+
