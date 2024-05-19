@@ -3,7 +3,7 @@ import requests, json
 from serpapi import GoogleSearch
 import google.generativeai as genai
 
-genai.configure(api_key="")
+genai.configure(api_key="ENTER API KEY HERE")
 
 model = genai.GenerativeModel('gemini-pro')
 app = Flask(__name__, static_folder='static', template_folder='templates')
@@ -26,7 +26,7 @@ def index():
         if(text == "" or checkin == "" or checkout == ""):
             return render_template('index.html', error = True)
         params = {
-            "api_key": "c1fed33f43014632d06b27c4a7808bede13b4be6bb258dc774f3ea5d30b6ccf9",
+            "api_key": "ENTER API KEY HERE",
             "engine": "google_hotels",
             "q": text,
             "hl": "en",
