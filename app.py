@@ -3,7 +3,7 @@ import requests, json
 from serpapi import GoogleSearch
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyCORZjVKNWJWiZ7arHPIqKK8XNfLF879Ao")
+genai.configure(api_key="")
 
 model = genai.GenerativeModel('gemini-pro')
 app = Flask(__name__, static_folder='static', template_folder='templates')
